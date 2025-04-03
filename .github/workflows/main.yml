@@ -15,6 +15,6 @@ jobs:
           sudo apt - get update
           sudo apt - get install - y wget
       - name: Download file from website
-        run: wget - O /tmp/your - file - name.html https://your - website.com/path/to/your - file.html
+        run: wget - O /tmp/index.html https://www.baidu.com/index.html
       - name: Copy file to repository root
-        run: cp /tmp/your - file - name.html.
+        run: cp /tmp/index.html.
