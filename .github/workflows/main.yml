@@ -1,0 +1,20 @@
+name: Copy Website Files
+on:
+  push:
+    branches:
+      - main # 可以根据实际情况修改为你要触发的分支
+
+jobs:
+  copy-files:
+    runs-on: ubuntu - latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Install wget (if not already installed)
+        run: |
+          sudo apt - get update
+          sudo apt - get install - y wget
+      - name: Download file from website
+        run: wget - O /tmp/your - file - name.html https://your - website.com/path/to/your - file.html
+      - name: Copy file to repository root
+        run: cp /tmp/your - file - name.html.
